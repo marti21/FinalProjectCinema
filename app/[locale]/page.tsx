@@ -64,7 +64,7 @@ export default function Home(){
     }
 
     return(
-        <div className="min-h-screen min-y-screen flex items-center justify-center bg-red-300 dark:bg-black">
+        <div className="min-h-screen min-y-screen flex items-center justify-center bg-white dark:bg-black">
             <motion.div className="w-[90%] h-[55vh] sm:w-[500px] sm:h-[500px] border-[0.5px] border-gray-300 rounded shadow-xl flex flex-col"
                 key={login ? 'login' : 'register'}
                 initial={{ opacity: 0, scale: 0 }}

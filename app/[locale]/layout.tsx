@@ -5,7 +5,8 @@ import { dir } from 'i18next'
 import {notFound} from 'next/navigation';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
 import {unstable_setRequestLocale} from 'next-intl/server';
-import Head from 'next/head';
+import { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <Head>
-        <meta name="google-adsense-account" content="ca-pub-2532774457900699" />        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2532774457900699" crossOrigin="anonymous"></script>
       </Head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>

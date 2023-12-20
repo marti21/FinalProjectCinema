@@ -3,6 +3,7 @@ import Section from '../../ui/Section'
 import Link from 'next/link'
 import '@/app/ui/navBar.css'
 import Dropdown from '../../ui/Dropdown'
+import {unstable_setRequestLocale} from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: 'Dashboard',
@@ -10,10 +11,12 @@ export const metadata: Metadata = {
 }
 
 export default async function Dashboard({
-  children,
+  children, params: {locale}
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,params: {locale:any}
+
 }) {
+  unstable_setRequestLocale(locale);
 
   return (
     <>

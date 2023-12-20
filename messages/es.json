@@ -1,0 +1,13 @@
+{
+  "LoginRegister": {
+    "titleLogin": "Iniciar Sessión",
+    "titleRegister": "Registrarse",
+    "Email": "Correo electrónico",
+    "Password": "Contraseña",
+    "ConfirmPassword": "Confirmar Contraseña",
+    "Accept": "Aceptar",
+    "HaveAccount": "Si ya tienes una cuenta, Inicia sessión ",
+    "Here": "aqui",
+    "HaventAccount": "Si no tienes una cuenta, Registrate"
+  }
+}

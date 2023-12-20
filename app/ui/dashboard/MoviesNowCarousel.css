@@ -1,0 +1,15 @@
+.gridMa {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 20% 80%;
+    grid-row-gap: 20px; /* Ajusta este valor según tus necesidades */
+}
+
+@media screen and (max-width: 640px) {
+    .gridMa {
+        display: grid;
+        gap: 2px;
+        grid-template-columns: 38% 62%;
+        grid-row-gap: 20px; /* Ajusta este valor según tus necesidades */
+    }
+}

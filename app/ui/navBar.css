@@ -1,0 +1,22 @@
+.navButton{
+    position: relative;
+}
+.navButton:after{
+    content: '';
+    width: 0%;
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    height: 2px;
+    transition: 0.3s ease;
+    background-color: #000000;
+    border-radius: 10px;
+}
+.navButton:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+.dark .navButton::after {
+    background-color: #FFF; /* Cambia a rojo en modo oscuro */
+}

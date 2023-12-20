@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <Head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2532774457900699" crossOrigin="anonymous"></script>
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2532774457900699" crossOrigin="anonymous"></Script>
       </Head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>

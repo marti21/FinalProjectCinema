@@ -5,6 +5,7 @@ import { dir } from 'i18next'
 import {notFound} from 'next/navigation';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
 import {unstable_setRequestLocale} from 'next-intl/server';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -28,7 +29,14 @@ export default function RootLayout({
 
   return (
     <html lang={locale}>
-      <head />
+      <Head>
+        {/* Agrega tu script aquí */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2532774457900699"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>{children}</Providers>

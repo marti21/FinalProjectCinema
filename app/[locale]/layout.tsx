@@ -4,6 +4,7 @@ import { Providers } from '@/app/ui/providers'
 import { dir } from 'i18next'
 import {notFound} from 'next/navigation';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
+import {unstable_setRequestLocale} from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -21,6 +22,8 @@ export default function RootLayout({
   children: React.ReactNode, params: {locale:any}
 }) {
   if (!locales.includes(locale as any)) notFound();
+  unstable_setRequestLocale(locale);
+
   const messages = useMessages();
 
   return (

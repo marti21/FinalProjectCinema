@@ -4,9 +4,6 @@ import { Providers } from '@/app/ui/providers'
 import { dir } from 'i18next'
 import {notFound} from 'next/navigation';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
-import {unstable_setRequestLocale} from 'next-intl/server';
-import { Html, Head, Main, NextScript } from 'next/document';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -24,15 +21,11 @@ export default function RootLayout({
   children: React.ReactNode, params: {locale:any}
 }) {
   if (!locales.includes(locale as any)) notFound();
-  unstable_setRequestLocale(locale);
-
   const messages = useMessages();
 
   return (
     <html lang={locale}>
-      <Head>
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2532774457900699" crossOrigin="anonymous"></Script>
-      </Head>
+      <head />
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>{children}</Providers>

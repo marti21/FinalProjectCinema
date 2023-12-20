@@ -30,12 +30,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <Head>
-        {/* Agrega tu script aquí */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2532774457900699"
-          crossOrigin="anonymous"
-        ></script>
+        <meta name="google-adsense-account" content="ca-pub-2532774457900699" />        
       </Head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>

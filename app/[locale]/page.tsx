@@ -63,8 +63,22 @@ export default function Home(){
         }
     }
 
+    useEffect(() => {
+        // Cargar el script de AdSense
+        const script = document.createElement('script');
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2532774457900699';
+        script.async = true;
+        script.crossOrigin = 'anonymous';
+        document.head.appendChild(script);
+    
+        // Ejecutar el script cuando el componente se desmonte
+        return () => {
+          document.head.removeChild(script);
+        };
+      }, []);
+
     return(
-        <div className="min-h-screen min-y-screen flex items-center justify-center bg-white dark:bg-black">
+        <div className="min-h-screen min-y-screen flex flex items-center justify-center bg-white dark:bg-black">
             <motion.div className="w-[90%] h-[55vh] sm:w-[500px] sm:h-[500px] border-[0.5px] border-gray-300 rounded shadow-xl flex flex-col"
                 key={login ? 'login' : 'register'}
                 initial={{ opacity: 0, scale: 0 }}
@@ -111,6 +125,16 @@ export default function Home(){
                     <a className="text-blue-200 cursor-pointer pl-1 text-sm" onClick={() => setLogin(!login)}>{t('Here')}</a>
                 </div>
             </motion.div>
+            <div className="bg-red-300 h-[10%] w-full fixed left-0 bottom-0">
+                <ins
+                    className="adsbygoogle"
+                    style={{ display: 'block' }}
+                    data-ad-client="ca-pub-2532774457900699"
+                    data-ad-slot="4679627364"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"
+                ></ins>
+            </div>
         </div>
     )
 }
